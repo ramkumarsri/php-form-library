@@ -103,15 +103,12 @@ $form_options = array(
         
 	);
 	
-// $form->rule('required', 'first_name')->message('{field} is required');
-// $form->rule('required', ['last_name', 'address', 'confirm_email', 'email', 'phone_number', 'zip', 'marital_status','technology','gender'])->message('Required: {field} cannot be empty');
+$form->rule('required', 'first_name')->message('{field} is required');
+//$form->rule('required', ['last_name', 'address', 'confirm_email', 'email', 'phone_number', 'zip', 'marital_status','technology','gender'])->message('Required: {field} cannot be empty');
 $form->rule('email', 'email');
 $form->rule('equals','confirm_email','email');
 echo $form->_form_open();
 echo $form->build_form_field_input($form_options);
 echo $form->_form_close();
-
-echo "<pre>";
-print_r($_POST);
 
 ?>
